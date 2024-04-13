@@ -1,0 +1,9 @@
+{% extends 'header.html' %}
+
+{% block form_login %}
+<form action="validar-login" method="post">
+    <input type="text" name="cedula_user" placeholder="Cedula">
+    <input type="password" name="password_user" placeholder="Contraseña">
+    <input type="submit" value="Ingresaar">
+</form>
+{% endblock %}

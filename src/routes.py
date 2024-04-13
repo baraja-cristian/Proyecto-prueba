@@ -1,5 +1,5 @@
 from __init__ import app, get_db
-from flask import render_template
+from flask import render_template, request
 
 #Endpont pagina principal
 @app.route('/')
@@ -11,12 +11,14 @@ def login():
 def validar_login():
     if get_db() is None:
         return "Error en la base de datos"
-    cur = get_db().cursor()
-    sql=cur.execute("SELECT * FROM empleado")
-    sql=cur.fetchall()
-    print(sql)  
-    
-    
+    else:
+        # Obtener los datos de un campo del formulario
+        usuario = request.form['cedula_user'] 
+        clave = request.form['password_user']       
+         
+        print(request.form['cedula_user'])
+        print(request.form['password_user'])
+        
 @app.route('/home')
 def home():
     return "Welcome to the Home Page"
