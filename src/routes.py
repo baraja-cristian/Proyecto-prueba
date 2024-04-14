@@ -21,4 +21,4 @@ def validar_login():
         
 @app.route('/home')
 def home():
-    return "Welcome to the Home Page"
+    return render_template('home.html')

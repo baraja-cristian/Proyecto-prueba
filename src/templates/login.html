@@ -3,9 +3,16 @@
 <!--TITULO DE LA PAGINA WEB-->
 {% block title%} Login {%endblock%}
 
+<!--ESTILOS DE LA PAGINA WEB-->
+{% block css_loging %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+
 <!--FORMULARIO DE LOGIN-->
 {% block form_login %}
 <form action="validar-login" method="post">
+    <h1>Bienvenido</h1>
     <input type="text" name="cedula_user" placeholder="Cedula">
     <input type="password" name="password_user" placeholder="Contraseña">
     <input type="submit" value="Ingresaar">
