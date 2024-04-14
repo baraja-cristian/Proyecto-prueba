@@ -4,13 +4,13 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #1F2024;
   }
   
   form {
     background-color: white;
     padding: 40px; /* Aumentado de 20px a 40px */
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
   }
@@ -33,4 +33,10 @@ body {
     border-radius: 3px;
     cursor: pointer;
     font-size: 16px; /* Añadido para aumentar el tamaño de fuente */
+  }
+
+  input[type="submit"]:hover {
+    background-color: #F2AE30;
+    transform: scale(1.09);
+    transition: 0.1s all ease;
   }
