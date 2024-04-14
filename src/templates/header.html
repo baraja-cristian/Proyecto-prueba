@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eS">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loging</title>
+    <title>{% block title%} {% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 </head>
 <body>
+    <!--FORMULARIO DE LOGIN-->
     {% block form_login%} {% endblock  %}
 </body>
 

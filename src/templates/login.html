@@ -1,5 +1,9 @@
 {% extends 'header.html' %}
 
+<!--TITULO DE LA PAGINA WEB-->
+{% block title%} Login {%endblock%}
+
+<!--FORMULARIO DE LOGIN-->
 {% block form_login %}
 <form action="validar-login" method="post">
     <input type="text" name="cedula_user" placeholder="Cedula">
