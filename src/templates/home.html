@@ -3,12 +3,25 @@
 {% block title%} Home {%endblock%}
 
 
+
+
+
 <!--ESTILOS DE LA PAGINA WEB-->
 {% block css_home %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 {% endblock %}
 
 {% block container%}
+<header>
+  <nav>
+    <ul>
+      <li class="welcome">Bienvenido, {{datos_usuario[1]}} {{datos_usuario[2]}}</li>
+      <li class="logout"><a href="{{ url_for('logout') }}">Salir</a></li>
+    </ul>
+  </nav>
+</header>
+
+
 <div class="container">
     <div class="inner-container">
       <h1>Generar facturas</h1>
